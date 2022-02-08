@@ -1,0 +1,47 @@
+<%= form_with(model: evidence) do |form| %>
+  <% if evidence.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(evidence.errors.count, "error") %> prohibited this evidence from being saved:</h2>
+
+      <ul>
+        <% evidence.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :order, style: "display: block" %>
+    <%= form.text_field :order %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.number_field :status %>
+  </div>
+
+  <div>
+    <%= form.label :distributor, style: "display: block" %>
+    <%= form.text_field :distributor %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :content, style: "display: block" %>
+    <%= form.rich_text_area :content %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
