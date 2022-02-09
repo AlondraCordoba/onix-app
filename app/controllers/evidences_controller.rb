@@ -1,5 +1,6 @@
 class EvidencesController < ApplicationController
   before_action :set_evidence, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /evidences or /evidences.json
   def index
@@ -21,7 +22,11 @@ class EvidencesController < ApplicationController
 
   # POST /evidences or /evidences.json
   def create
-    @evidence = Evidence.new(evidence_params)
+    @evidence = current_user.evidences.new(evidence_params)
+    # @evidence.user = current_user
+    # @evidence = current_user.evidences.new(evidence_params)
+    # @evidence.user = current_user
+    # @evidence.save
 
     respond_to do |format|
       if @evidence.save
@@ -57,6 +62,10 @@ class EvidencesController < ApplicationController
     end
   end
 
+  def find_store
+    @user = User.find(params[:user_id])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_evidence
@@ -65,6 +74,6 @@ class EvidencesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def evidence_params
-      params.require(:evidence).permit(:title, :order, :status, :distributor, :description, :content)
+      params.require(:evidence).permit(:title, :order, :status, :distributor, :description)
     end
 end

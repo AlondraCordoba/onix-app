@@ -88,3 +88,5 @@ end
 gem "sassc-rails", "~> 2.1"
 
 gem 'devise', github: 'heartcombo/devise', branch: 'main'
+
+gem "aws-sdk-s3", require: false

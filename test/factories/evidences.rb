@@ -5,6 +5,5 @@ FactoryBot.define do
     status { 1 }
     distributor { "MyString" }
     description { "MyText" }
-    content { nil }
   end
 end

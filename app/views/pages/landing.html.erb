@@ -1,0 +1,19 @@
+<h1>Landing Page</h1>
+<% if user_signed_in? %>
+    <p>Welcome <%= current_user.place_name %>.</p>
+        <p>
+            You have successfully authenticated with ur devise account
+            You're now ready to interact with this app
+        </p>
+    <p>You're a <b><%= current_user.role %></b> </p>
+    <% if current_user.user_store? %>
+       There are <b><%= User.count %></b> users in de system...
+    <% end %>
+    <br>
+    <%= button_to "Sign out", destroy_user_session_path, method: :delete%>
+<% else %>
+    <p>You're not signed in...</p>
+    <%# <%= link_to "Sign up", new_user_registration_path%>
+    <br>
+    <%# <%= link_to "Login", new_user_session_path%>
+<% end %>
