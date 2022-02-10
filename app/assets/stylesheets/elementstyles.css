@@ -1896,7 +1896,7 @@ ul {
 }
 
 .main_menu {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -2171,7 +2171,7 @@ ul {
 
 .banner_part {
   position: relative;
-  background-image: url(../img/banner_bg.png);
+  background-image: url(../images/banner_bg.png);
   background-repeat: no-repeat;
   background-size: 65% 100%;
   background-position: left top;
@@ -3131,7 +3131,7 @@ ul {
 }
 
 .footer_part {
-  background-image: url("../img/footer_bg.png");
+  /* background-image: url("../images/footer_bg.png"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -5026,7 +5026,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .footer_part {
-  background-image: url("../img/footer_bg.png");
+  /* background-image: url("../images/footer_bg.png"; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

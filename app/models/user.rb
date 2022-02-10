@@ -9,6 +9,4 @@ class User < ApplicationRecord
     self.role ||= :user_store
   end
   has_many :evidences, dependent: :destroy
-  has_one :address, dependent: :destroy
-  belongs_to :address
 end
