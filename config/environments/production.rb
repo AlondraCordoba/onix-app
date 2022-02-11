@@ -98,9 +98,5 @@ Rails.application.configure do
   end
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  const PORT = process.env.PORT || 5000
-  
-      app.listen(PORT, function() {
-      console.log("Server running on port 5000...");
-      });
+
 end
