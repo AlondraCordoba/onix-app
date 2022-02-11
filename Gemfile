@@ -85,7 +85,7 @@ group :test do
   gem "webdrivers"
 end
 
-gem "sassc-rails", "~> 2.1"
+gem "sassc-rails", "~> 2.1", require: false
 
 gem 'devise', github: 'heartcombo/devise', branch: 'main'
 
