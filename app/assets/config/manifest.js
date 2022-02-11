@@ -3,6 +3,7 @@
 //= link custom.css
 //= link animated.css
 //= link carousel.css
+//= link landingst.css
 //= link icons.css
 //= link elementstyles.css
 //= link application.js
