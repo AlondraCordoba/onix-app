@@ -1,12 +1,10 @@
-<div style="margin-top: 100px">
+<div style="margin-top: 100px;" class="justify-content-center align-items-center row">
 <p style="color: green"><%= notice %></p>
 
-<%= render @evidence %>
-
-<div>
-  <%= link_to "Edit this evidence", edit_evidence_path(@evidence) %> |
-  <%= link_to "Back to evidences", evidences_path %>
-
-  <%= button_to "Destroy this evidence", @evidence, method: :delete %>
+<%= render @evidence%>
+<div class="row justify-content-center">
+  <%= link_to "Edit this evidence", edit_evidence_path(@evidence), class: 'btn btn-warning col-3', style: "margin-right:10px; margin-top: 5px"%>
+  <%= link_to "Back to evidences", evidences_path, class: 'btn btn-success col-3', style: "margin-right:10px; margin-top: 5px" %>
+  <%= button_to "Destroy this evidence", @evidence, method: :delete, class: 'btn btn-danger' %>
 </div>
 </div>

@@ -1,9 +1,13 @@
+<div style="margin-top: 100px">
+
 <h1>New evidence</h1>
 
 <%= render "form", evidence: @evidence %>
 
 <br>
 
-<div>
-  <%= link_to "Back to evidences", evidences_path %>
+<div class="row justify-content-center" style="margin-top:20px">
+<%= link_to "Back to evidences", evidences_path, class: "btn btn-dark col-2"%>
+</div>
+
 </div>

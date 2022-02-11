@@ -1,17 +1,43 @@
 
 <% if user_signed_in? %>
-<div style="margin-top: 100px">
-    <p>Welcome <%= current_user.place_name %>.</p>
+<div style="margin-top: 50px">
+    <%# <p>Welcome <%= current_user.place_name %>
+    <%# .</p>
         <p>
-            You have successfully authenticated with ur devise account
-            You're now ready to interact with this app
-        </p>
-    <p>You're a <b><%= current_user.role %></b> </p>
+            You have successfully authenticated, now ready to interact with this app
+        </p> %>
+    <%# <p>You're a <b><%= current_user.role %>
+    <%# </b> </p> %>
     <% if current_user.user_store? %>
-       There are <b><%= User.count %></b> users in de system...
+       <%# There are <b><%= User.count</b> users in de system... %>
+       <div style="margin-left: 90%">
+                  <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-danger"%>
+       </div>
+ <section class="banner_part">
+        <div class="container">
+            <div class="row align-items-center justify-content-between" style="position: relative; z-index: -1;">
+                <div class="col-lg-5">
+                    <div class="banner_img d-none d-lg-block">
+                        <%= image_tag("banner_img.png", :alt => "banner") %>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="banner_text">
+                        <div class="banner_text_iner">
+                            <h2>Welcome</h2>
+                            <p style="font-size: 20px">
+                                Now you're ready to interact with the application.
+                            </p>
+                            <div class="col-lg-12" style="width: 100%; justify-content: center; text-align: center">
+                                <%= button_to "Start Now", evidences_path, class:'btn btn-outline-light btn_1 home_page_btn', style:"font-size: 18px; width: 250px" %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <% end %>
-    <br>
-    <%= button_to "Sign out", destroy_user_session_path, method: :delete%>
 </div>
 <% else %>
     <section class="banner_part">

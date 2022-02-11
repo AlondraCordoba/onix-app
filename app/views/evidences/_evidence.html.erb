@@ -1,32 +1,18 @@
+  <div class="card col-6">
 <div id="<%= dom_id evidence %>">
-  <p>
-    <strong>Title:</strong>
-    <%= evidence.title %>
-  </p>
+                            <%= image_tag("almacen.png", :alt => "banner", :class =>"card-img-top")%>
+   <div class="card-body">
+      <h5 class="card-title text-center"><%= evidence.title %></h5>
+      <p class="card-text"> <strong>Order:</strong> <%= evidence.order %></p>
+      <p class="card-text"> <strong>Distributor:</strong> <%= evidence.distributor %></p>
+      <p class="card-text"> <strong>Description:</strong> <%= evidence.description %></p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted"><%= evidence.user.email %></small> <br />
+            <%= link_to "Show this evidence", evidence, class:"btn btn-primary", style:"margin-left:25%;"%>
 
-  <p>
-    <strong>Order:</strong>
-    <%= evidence.order %>
-  </p>
+    </div>
 
-  <p>
-    <strong>Status:</strong>
-    <%= evidence.status %>
-  </p>
-
-  <p>
-    <strong>Distributor:</strong>
-    <%= evidence.distributor %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= evidence.description %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= evidence.user.email %>
-  </p>
+</div>
 
 </div>
